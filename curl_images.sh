@@ -1,12 +1,10 @@
 #!/bin/sh
 
 SHFILE=$(basename $0)
-URL=${1}
-USER_AGENT=${USER_AGENT:-"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Safari/537.36 Edg/89.0.774.45"}
-
+USER_AGENT=${USER_AGENT:-"Mozilla/5.0"}
 LOGFILE=${LOGFILE:-output.log}
 
-curl "${URL}" \
+curl \
   -H 'pragma: no-cache' \
   -H 'cache-control: no-cache' \
   -H 'dnt: 1' \
